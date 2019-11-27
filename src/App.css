@@ -1,19 +1,22 @@
 :root{
-  --mainBlue: #2a2a72;
+  --mainBlue: #22224e;
   --lightBlue: #009ffd;
+  --logoBlue: #99D9EA;
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
+  --hoverDark: #4a4d52;
   --mainYellow: #ffa400;
+  --boxShadow: rgba(0, 0, 0, 0.5);
 }
 
 body {
-  font-family: 'Oswald', sans-serif !important;
+  font-family: 'Nunito', sans-serif !important;
   background: var(--mainWhite) !important;
   color: var(--mainDark) !important;
 }
 
 .text-title {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Comfortaa', cursive;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
