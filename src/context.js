@@ -7,8 +7,23 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
     state = {
-        messiers: messierObjects,
+        messiers: [],
         detailObject: detailObject 
+    }
+    componentDidMount() {
+        this.setMessiers();
+    }
+    /* this method helps to pass the messierObject
+       into this.state.messiers by value (not by reference) */
+    setMessiers = () => {
+        let tempMessiers = [];
+        messierObjects.forEach( item => {
+            const singleItem = {...item};
+            tempMessiers = [...tempMessiers, singleItem];
+        });
+        this.setState( () => {
+            return {messiers: tempMessiers};
+        });
     }
     handleDetail = () => {
         console.log('hello from detail');
@@ -16,6 +31,7 @@ class ProductProvider extends Component {
     addToCart = () => {
         console.log('hello from add to cart');
     }
+
     render() {
         return (
             <ProductContext.Provider value={{
