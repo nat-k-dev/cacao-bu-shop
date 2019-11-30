@@ -1,0 +1,5 @@
+1) change data fields to more suitable for messier catalog
+2) replace Product and ProductList by Messier and MessierList
+3) fix different heights of cards
+4) make header fixed at the top while scrolling cards
+5) make cards visible only after scrolling down (ajax - ?)
