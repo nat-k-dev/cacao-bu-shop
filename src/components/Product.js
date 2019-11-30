@@ -66,7 +66,7 @@ Product.propTypes = {
 
 const ProductWrapper = styled.div`
     .card {
-        border: 0.04rem solid rgba(0, 0, 0, 0.7);
+        border: 0.04rem solid rgba(0, 0, 0, 0.2);
         transition: all 1s linear;
         background: rgb(50, 50, 50);
         color: var(--mainWhite);
