@@ -4,6 +4,7 @@
   --logoBlue: #99D9EA;
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
+  --backgroundDark: #282a2e;
   --hoverDark: #4a4d52;
   --mainYellow: #ffa400;
   --boxShadow: rgba(0, 0, 0, 0.2);
@@ -11,7 +12,7 @@
 
 body {
   font-family: 'Nunito', sans-serif !important;
-  background: var(--mainDark) !important;
+  background: var(--backgroundDark) !important;
   color: var(--mainWhite) !important;
 }
 
