@@ -41,4 +41,7 @@ const NavWrapper = styled.nav`
         text-transform: uppercase;
         font-weight: semi-bold;
     }
+    .nav-link:hover {
+        color: var(--hoverDark) !important;
+    }
 `
