@@ -28,6 +28,7 @@ export default class Product extends Component {
                                     disabled={inCart ? true : false} 
                                     onClick={() => {
                                         value.addToCart(id);
+                                        value.openModal(id);
                                     }}
                                 >
                                     {inCart ? (
@@ -36,7 +37,7 @@ export default class Product extends Component {
                                             in cart
                                         </p>
                                     ) : (
-                                        <span className="add-to-cart-btn">
+                                        <span className="add-to-cart-btn text-uppercase">
                                             <i className="fas fa-shopping-basket mr-2" />
                                             add
                                         </span>

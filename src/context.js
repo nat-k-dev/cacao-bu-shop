@@ -8,7 +8,10 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
     state = {
         messiers: [],
-        detailObject: detailObject 
+        detailObject: detailObject,
+        cart: [],
+        modalOpen: true,
+        modalMessier: detailObject,
     }
     componentDidMount() {
         this.setMessiers();
@@ -39,8 +42,40 @@ class ProductProvider extends Component {
             };
         });
     }
-    addToCart = (id) => {
-        console.log(`cart.id is ${id}`);
+    addToCart = id => {
+        let tempMessiers = [...this.state.messiers];
+        const index = tempMessiers.indexOf(this.getItem(id));
+        const messier = tempMessiers[index];
+        messier.inCart = true;
+        messier.count = 1;
+        const price = messier.price;
+        messier.total = price;
+        this.setState(() => {
+            return {
+                messiers: tempMessiers,
+                cart: [...this.state.cart, messier]
+            };
+        }, () => {
+             console.log(this.state);
+        });
+    }
+
+    openModal = id => {
+        const messier = this.getItem(id);
+        this.setState(() => {
+            return {
+                modalMessier: messier,
+                modalOpen: true
+            };
+        });
+    }
+
+    closeModal = () => {
+        this.setState(() => {
+            return {
+                modalOpen: false
+            };
+        });
     }
 
     render() {
@@ -48,7 +83,9 @@ class ProductProvider extends Component {
             <ProductContext.Provider value={{
                 ...this.state, 
                 handleDetail: this.handleDetail,
-                addToCart: this.addToCart
+                addToCart: this.addToCart,
+                openModal: this.openModal,
+                closeModal: this.closeModal
             }}>
                 {this.props.children}
             </ProductContext.Provider>
