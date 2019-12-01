@@ -10,45 +10,59 @@ export default class Product extends Component {
         return (
             <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3 align-self-end">
                 <div className="card">
-                    <div className="img-container p-3" onClick={() => console.log('you clicked me on the image container')}>
-                        <Link to="/details">
-                            <img src={img} alt="messier object image" className="card-img-top mb-3" />
-                        </Link>
+                        
+                    <ProductConsumer>
+                        { (value) => (
+                            <div 
+                            className="img-container p-3" 
+                            onClick={() => 
+                                value.handleDetail(id)
+                            }
+                            >
+                                <Link to="/details">
+                                    <img src={img} alt="messier object image" className="card-img-top mb-3" />
+                                </Link>
 
-                        <button 
-                            className="cart-btn" 
-                            disabled={inCart ? true : false} 
-                            onClick={() => {
-                                console.log('added to the cart')
-                            }}
-                        >
-                            {inCart ? (
-                                <p className="text-uppercase mb-0" disabled>
-                                    {" "}
-                                    in cart
-                                </p>
-                            ) : (
-                                <span className="add-to-cart-btn">
-                                    <i className="fas fa-shopping-basket mr-2" />
-                                    add
-                                </span>
-                            )}
-                        </button>
+                                <button 
+                                    className="cart-btn" 
+                                    disabled={inCart ? true : false} 
+                                    onClick={() => {
+                                        value.addToCart(id);
+                                    }}
+                                >
+                                    {inCart ? (
+                                        <p className="text-uppercase mb-0" disabled>
+                                            {" "}
+                                            in cart
+                                        </p>
+                                    ) : (
+                                        <span className="add-to-cart-btn">
+                                            <i className="fas fa-shopping-basket mr-2" />
+                                            add
+                                        </span>
+                                    )}
+                                </button>
+                            </div>
 
-                        {/* card footer */}
+                        )}
+                        
+                    </ProductConsumer>
 
-                        <div className="card-footer d-flex justify-content-between">
-                            <p className="align-self-center mb-0">
-                                {title}
-                            </p>
-                            <h5 className="text-blue font-italic mb-0">
-                                <span className="mr-1">$</span>
-                                {price}
-                            </h5>
-                        </div>
 
+                    {/* card footer */}
+
+                    <div className="card-footer d-flex justify-content-between">
+                        <p className="align-self-center mb-0">
+                            {title}
+                        </p>
+                        <h5 className="text-blue font-italic mb-0">
+                            <span className="mr-1">$</span>
+                            {price}
+                        </h5>
                     </div>
+
                 </div>
+                
             </ProductWrapper>
         )
     }

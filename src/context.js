@@ -25,11 +25,22 @@ class ProductProvider extends Component {
             return {messiers: tempMessiers};
         });
     }
-    handleDetail = () => {
-        console.log('hello from detail');
+
+    getItem = id => {
+        const messier = this.state.messiers.find(item => item.id === id);
+        return messier;
     }
-    addToCart = () => {
-        console.log('hello from add to cart');
+
+    handleDetail = (id) => {
+        const details = this.getItem(id);
+        this.setState( () => {
+            return {
+                detailObject: details
+            };
+        });
+    }
+    addToCart = (id) => {
+        console.log(`cart.id is ${id}`);
     }
 
     render() {
