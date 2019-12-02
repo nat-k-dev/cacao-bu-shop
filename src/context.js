@@ -10,7 +10,7 @@ class ProductProvider extends Component {
         messiers: [],
         detailObject: detailObject,
         cart: [],
-        modalOpen: true,
+        modalOpen: false,
         modalMessier: detailObject,
     }
     componentDidMount() {
