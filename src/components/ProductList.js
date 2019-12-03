@@ -14,8 +14,8 @@ export default class ProductList extends Component {
                         <div className="row">
                             <ProductConsumer>
                                 { value=> {
-                                    return value.messiers.map( item => {
-                                        return <Product key={item.id} messierObject={item} />
+                                    return value.products.map( item => {
+                                        return <Product key={item.id} productObject={item} />
                                     })
                                 }}
                             </ProductConsumer>

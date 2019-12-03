@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 export default class Product extends Component {
     render() {
-        const {id, title, img, price, inCart} = this.props.messierObject;
+        const {id, title, img, price, inCart} = this.props.productObject;
         return (
             <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3 align-self-end">
                 <div className="card">
@@ -70,7 +70,7 @@ export default class Product extends Component {
 }
 
 Product.propTypes = {
-    messierObject: PropTypes.shape({
+    productObject: PropTypes.shape({
         id: PropTypes.number,
         img: PropTypes.string,
         title: PropTypes.string,

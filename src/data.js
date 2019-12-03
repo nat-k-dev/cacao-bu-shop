@@ -98,7 +98,7 @@ export const messierObjects = [
   }
 ];
 
-export const detailObject = {
+export const detailProduct = {
   id: 1,
   title: "M1 Crab Nebula",
   img: "img/messier-1.jpg",

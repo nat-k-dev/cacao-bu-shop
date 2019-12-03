@@ -8,7 +8,7 @@ export default class Details extends Component {
         return (
             <ProductConsumer>
                 {(value) => {
-                    const {id, type, img, info, price, title, inCart} = value.detailObject;
+                    const {id, type, img, info, price, title, inCart} = value.detailProduct;
                     return (
                         <div className="container py-5">
                             {/* title */}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { messierObjects, detailObject } from './data';
+import { messierObjects, detailProduct } from './data';
 
 const ProductContext = React.createContext();
 // Provider
@@ -7,53 +7,53 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
     state = {
-        messiers: [],
-        detailObject: detailObject,
+        products: [],
+        detailProduct: detailProduct,
         cart: [],
         modalOpen: false,
-        modalMessier: detailObject,
+        modalProduct: detailProduct,
     }
     componentDidMount() {
-        this.setMessiers();
+        this.setProducts();
     }
     /* this method helps to pass the messierObject
-       into this.state.messiers by value (not by reference) */
-    setMessiers = () => {
-        let tempMessiers = [];
+       into this.state.products by value (not by reference) */
+    setProducts = () => {
+        let tempProducts = [];
         messierObjects.forEach( item => {
             const singleItem = {...item};
-            tempMessiers = [...tempMessiers, singleItem];
+            tempProducts = [...tempProducts, singleItem];
         });
         this.setState( () => {
-            return {messiers: tempMessiers};
+            return {products: tempProducts};
         });
     }
 
     getItem = id => {
-        const messier = this.state.messiers.find(item => item.id === id);
-        return messier;
+        const product = this.state.products.find(item => item.id === id);
+        return product;
     }
 
     handleDetail = (id) => {
         const details = this.getItem(id);
         this.setState( () => {
             return {
-                detailObject: details
+                detailProduct: details
             };
         });
     }
     addToCart = id => {
-        let tempMessiers = [...this.state.messiers];
-        const index = tempMessiers.indexOf(this.getItem(id));
-        const messier = tempMessiers[index];
-        messier.inCart = true;
-        messier.count = 1;
-        const price = messier.price;
-        messier.total = price;
+        let tempProducts = [...this.state.products];
+        const index = tempProducts.indexOf(this.getItem(id));
+        const product = tempProducts[index];
+        product.inCart = true;
+        product.count = 1;
+        const price = product.price;
+        product.total = price;
         this.setState(() => {
             return {
-                messiers: tempMessiers,
-                cart: [...this.state.cart, messier]
+                products: tempProducts,
+                cart: [...this.state.cart, product]
             };
         }, () => {
              console.log(this.state);
@@ -61,10 +61,10 @@ class ProductProvider extends Component {
     }
 
     openModal = id => {
-        const messier = this.getItem(id);
+        const product = this.getItem(id);
         this.setState(() => {
             return {
-                modalMessier: messier,
+                modalProduct: product,
                 modalOpen: true
             };
         });
