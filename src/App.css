@@ -28,3 +28,21 @@ body {
 .text-bright {
   color: var(--lightBlue);
 }
+.btn-black {
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  color: var(--mainWhite) !important;
+  background: var(--mainWhite);
+  border: 0.1rem solid var(--mainWhite) !important;
+}
+.btn-black.clickable {
+  cursor: pointer;
+}
+.btn-black.clickable:hover {
+  background: var(--hoverDark) !important;
+}
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow) !important;
+}
