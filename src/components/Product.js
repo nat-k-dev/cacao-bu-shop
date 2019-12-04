@@ -119,7 +119,7 @@ const ProductWrapper = styled.div`
         color: var(--logoBlue);
         font-size: 1.2rem;
         border-radius: 0 0 0 0.5rem;
-        transform: translate(100%, 0);
+        transform: translate(60%, 0);
         transition: transform 1s linear;
     }
     .img-container:hover .cart-btn {
