@@ -36,7 +36,7 @@ body {
   font-size: 0.8rem !important;
   text-transform: uppercase;
   color: var(--mainWhite) !important;
-  background: var(--mainWhite);
+  background: var(--mainWhite) !important;
   border: 0.1rem solid var(--mainWhite) !important;
 }
 .btn-black.clickable {
