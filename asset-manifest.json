@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/messier-objects/static/css/main.5428b6b5.chunk.css",
+    "main.js": "/messier-objects/static/js/main.e4f33492.chunk.js",
+    "main.js.map": "/messier-objects/static/js/main.e4f33492.chunk.js.map",
+    "runtime-main.js": "/messier-objects/static/js/runtime-main.8eadcbe4.js",
+    "runtime-main.js.map": "/messier-objects/static/js/runtime-main.8eadcbe4.js.map",
+    "static/css/2.b0bb7f2c.chunk.css": "/messier-objects/static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.067eba0d.chunk.js": "/messier-objects/static/js/2.067eba0d.chunk.js",
+    "static/js/2.067eba0d.chunk.js.map": "/messier-objects/static/js/2.067eba0d.chunk.js.map",
+    "index.html": "/messier-objects/index.html",
+    "precache-manifest.5cb4062c0a76a81be02df04340bf896a.js": "/messier-objects/precache-manifest.5cb4062c0a76a81be02df04340bf896a.js",
+    "service-worker.js": "/messier-objects/service-worker.js",
+    "static/css/2.b0bb7f2c.chunk.css.map": "/messier-objects/static/css/2.b0bb7f2c.chunk.css.map",
+    "static/css/main.5428b6b5.chunk.css.map": "/messier-objects/static/css/main.5428b6b5.chunk.css.map",
+    "static/media/logo.svg": "/messier-objects/static/media/logo.85d4ba53.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8eadcbe4.js",
+    "static/css/2.b0bb7f2c.chunk.css",
+    "static/js/2.067eba0d.chunk.js",
+    "static/css/main.5428b6b5.chunk.css",
+    "static/js/main.e4f33492.chunk.js"
+  ]
+}
