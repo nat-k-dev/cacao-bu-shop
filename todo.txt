@@ -2,4 +2,4 @@
 2) fix different heights of cards
 3) make header fixed at the top while scrolling cards
 4) make cards visible only after scrolling down (ajax - ?)
-5) improve margins and paddings in cart
+5) fix dark line in right top (right to NavBar) on iPad
