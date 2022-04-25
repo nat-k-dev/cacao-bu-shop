@@ -14,7 +14,7 @@ export const messierObjects = [
   },
   {
     id: 2,
-    title: "M2",
+    title: "M2 (NGC 7089)",
     img: "img/messier-2.jpg",
     price: 16,
     type: "Globular cluster",
