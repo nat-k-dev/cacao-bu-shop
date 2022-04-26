@@ -7,6 +7,9 @@ import PropTypes from 'prop-types';
 export default class Product extends Component {
     render() {
         const {id, title, img, price, inCart} = this.props.productObject;
+        const inCartBtnStyle = {
+            transform: 'translate(0, 0)'
+        };
         return (
             <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3 align-self-end">
                 <div className="card">
@@ -26,6 +29,7 @@ export default class Product extends Component {
                                 <button 
                                     className="cart-btn" 
                                     disabled={inCart ? true : false} 
+                                    style={inCart ? inCartBtnStyle : {}}
                                     onClick={() => {
                                         value.addToCart(id);
                                         value.openModal(id);
@@ -120,7 +124,7 @@ const ProductWrapper = styled.div`
         font-size: 1.2rem;
         border-radius: 0 0 0 0.5rem;
         transform: translate(60%, 0);
-        transition: transform 1s linear;
+        transition: transform 0.5s linear;
     }
     .img-container:hover .cart-btn {
         transform: translate(0, 0);
