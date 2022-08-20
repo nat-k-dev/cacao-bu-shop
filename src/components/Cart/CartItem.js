@@ -10,7 +10,7 @@ export default function CartItem({item, value}) {
                     src={img} 
                     style={{width: '5rem', height: '5rem'}} 
                     className="img-fluid" 
-                    alt='messier object' 
+                    alt='product' 
                 />
             </div>
             <div className="col-10 mx-auto col-lg-2 d-flex justify-content-center align-items-center">

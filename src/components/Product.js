@@ -11,7 +11,7 @@ export default class Product extends Component {
             transform: 'translate(0, 0)'
         };
         return (
-            <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3 align-self-end">
+            <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-4 my-3 align-self-end">
                 <div className="card">
                         
                     <ProductConsumer>
@@ -23,7 +23,7 @@ export default class Product extends Component {
                             }
                             >
                                 <Link to="/details">
-                                    <img src={img} alt="messier object" className="card-img-top mb-3" />
+                                    <img src={img} alt="product" className="card-img-top mb-3" />
                                 </Link>
 
                                 <button 
