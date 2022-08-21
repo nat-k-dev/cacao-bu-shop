@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Product from './Product';
 import Title from './Title';
 import Carousel from './Carousel';
+import AboutText from './AboutText';
 import { ProductConsumer } from '../context';
 
 export default class ProductList extends Component {
@@ -23,6 +24,7 @@ export default class ProductList extends Component {
                         <div className="py-5">
                             <Title name="About" title="producer" className="row" />
                             <Carousel />
+                            <AboutText />
                         </div>
                     </div>
                 </div>
