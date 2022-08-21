@@ -3,6 +3,7 @@ import Product from './Product';
 import Title from './Title';
 import Carousel from './Carousel';
 import AboutText from './AboutText';
+import Contacts from './Contacts';
 import { ProductConsumer } from '../context';
 
 export default class ProductList extends Component {
@@ -25,6 +26,7 @@ export default class ProductList extends Component {
                             <Title name="About" title="producer" className="row" />
                             <Carousel />
                             <AboutText />
+                            <Contacts />
                         </div>
                     </div>
                 </div>
