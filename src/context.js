@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { messierObjects, detailProduct } from './data';
+import { chocoProducts, detailProduct } from './data';
 
 const ProductContext = React.createContext();
 // Provider
@@ -24,7 +24,7 @@ class ProductProvider extends Component {
     setProducts = () => {
         let tempProducts = [];
         let tempCart = [];
-        messierObjects.forEach(item => {
+        chocoProducts.forEach(item => {
             const singleItem = { ...item };
             const itemCount = localStorage.getItem(singleItem.title);
             if (itemCount){

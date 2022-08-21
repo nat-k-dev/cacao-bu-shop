@@ -28,7 +28,7 @@ export default class Details extends Component {
                                 <div className="col-10 mx-auto col-md-6 my-3 text-uppercase">
                                     <h2>name: {title}</h2>
                                     <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                                        object type : 
+                                        product type : 
                                         <span className="text-uppercase">{type}</span>
                                     </h4>
                                     <h4 className="text-blue">
@@ -38,7 +38,7 @@ export default class Details extends Component {
                                         </strong>
                                     </h4>
                                     <p className="text-uppercase font-weight-bold mt-3 mb-0">
-                                        some info about object:
+                                        some info about product:
                                     </p>
                                     <p className="text-muted lead">
                                         {info}
