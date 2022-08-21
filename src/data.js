@@ -1,5 +1,5 @@
 
-export const messierObjects = [
+export const chocoProducts = [
   {
     id: 1,
     title: "Pure chocolate bars",
