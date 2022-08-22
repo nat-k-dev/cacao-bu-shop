@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import { chocoProducts, detailProduct } from './data';
 
 const ProductContext = React.createContext();
@@ -6,6 +7,9 @@ const ProductContext = React.createContext();
 // Consumer
 
 class ProductProvider extends Component {
+    static propTypes = { 
+        children: PropTypes.any
+    }
     state = {
         products: [],
         detailProduct: detailProduct,
