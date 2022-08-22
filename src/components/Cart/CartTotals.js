@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 
 export default function CartTotals({value}) {
@@ -42,3 +43,6 @@ export default function CartTotals({value}) {
     )
 }
 
+CartTotals.propTypes = {
+    value: PropTypes.any, 
+}

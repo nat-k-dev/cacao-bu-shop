@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import CartItem from './CartItem'
 
 export default function CartList({value}) {
@@ -12,4 +13,8 @@ export default function CartList({value}) {
             })}
         </div>
     )
+}
+
+CartList.propTypes = {
+    value: PropTypes.any, 
 }

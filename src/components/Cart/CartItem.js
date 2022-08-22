@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from "prop-types";
 
 export default function CartItem({item, value}) {
     const { id, title, img, price, total, count } = item;
@@ -50,4 +51,9 @@ export default function CartItem({item, value}) {
             </div>
         </div>
     )
+}
+
+CartItem.propTypes = {
+    value: PropTypes.any, 
+    item: PropTypes.any, 
 }
