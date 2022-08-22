@@ -46,6 +46,7 @@ const CarouselStyles = styled.div`
         max-width: 500px;
         overflow: hidden;
         margin: auto;
+        border-radius: 1%;
     }
     .carousel-control-prev,
     .carousel-control-next {

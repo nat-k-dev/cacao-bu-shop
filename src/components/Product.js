@@ -109,7 +109,7 @@ const ProductWrapper = styled.div`
     }
     .card-img-top {
         transition: all 1s linear;
-        border-radius: 10%;
+        border-radius: 3%;
     }
     .img-container:hover .card-img-top {
         transform: scale(1.05);
