@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from "prop-types";
 
 export default function Title({name, title}) {
     return (
@@ -10,4 +11,9 @@ export default function Title({name, title}) {
             </div>
         </div>
     )
+}
+
+Title.propTypes = {
+    name: PropTypes.any,
+    title: PropTypes.any,
 }
