@@ -23,3 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 /public/404.html
+.email-credentials.txt
