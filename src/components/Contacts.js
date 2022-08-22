@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 export default class Contacts extends Component {
     constructor(props) {
         super(props);
-        this.state = { message: '', email: 'name@example.com', name: '' };
+        this.state = { message: '', email: '', name: '' };
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handleMessageChange = this.handleMessageChange.bind(this);
@@ -19,9 +19,9 @@ export default class Contacts extends Component {
                 <p className="mt-3 mb-3 text-center">
                     If you are interested in my production, please, write me via this form <span role="img" aria-label="Finger down">👇</span>
                 </p>
-                <RequiredLabelStyle>
+                <FormStyle>
                     <form action="submit">
-                        <div className="form-group required">
+                        <div className="form-group required form-name">
                             <label htmlFor="exampleFormControlInput1" className="control-label">Your name:</label>
                             <input 
                                 type="text" 
@@ -33,7 +33,7 @@ export default class Contacts extends Component {
                                 required />
                         </div>
 
-                        <div className="form-group required">
+                        <div className="form-group required form-email">
                             <label htmlFor="exampleFormControlInput2" className=" control-label">Your email:</label>
                             <input 
                                 type="email" 
@@ -45,7 +45,7 @@ export default class Contacts extends Component {
                                 required />
                         </div>
                         
-                        <div className="form-group required">
+                        <div className="form-group required form-message">
                             <label htmlFor="exampleFormControlTextarea1" className=" control-label">Your message:</label>
                             <textarea 
                                 className="form-control" 
@@ -62,7 +62,7 @@ export default class Contacts extends Component {
                             </ButtonContainer>
                         </ButtonStyle>
                     </form>
-                </RequiredLabelStyle>
+                </FormStyle>
 
             </React.Fragment>
                 //<Product />
@@ -71,23 +71,33 @@ export default class Contacts extends Component {
 
 
     handleNameChange(event) {
+        document.querySelector('.form-name.required').classList.remove('show');
         this.setState({name: event.target.value})
     }
     handleEmailChange(event) {
+        document.querySelector('.form-email.required').classList.remove('show');
         this.setState({email: event.target.value})
     }
     handleMessageChange(event) {
+        document.querySelector('.form-message.required').classList.remove('show');
         this.setState({message: event.target.value})
     }    
 
     handleSubmit() {
-        if (this.isEmptyField(this.state.name)
-            || this.isEmptyField(this.state.email)
-            || this.isEmptyField(this.state.message)) {
-                // show message
-                return;
+        const emptyName = this.isEmptyField(this.state.name);
+        const emptyEmail = this.isEmptyField(this.state.email);
+        const emptyMessage = this.isEmptyField(this.state.message);
+        if (emptyName) {
+            document.querySelector('.form-name.required').classList.add('show');
         }
-
+        if (emptyEmail) {
+            document.querySelector('.form-email.required').classList.add('show');
+        }
+        if (emptyMessage) {
+            document.querySelector('.form-message.required').classList.add('show');
+        }
+        if (emptyName || emptyEmail || emptyMessage) return;
+        
         const serviceId = "service_d5l1y48";
         const templateId = 'template_nsrxxqg';
         const publicKey = "ZAt6G-u-rgpxh0FUj";
@@ -110,12 +120,48 @@ export default class Contacts extends Component {
       }
 }
 
-const RequiredLabelStyle = styled.div`
+const FormStyle = styled.div`
     .form-group.required .control-label:after { 
         color: #d00;
         content: "*";
         position: absolute;
     }
+    .required {
+        position: relative;
+    }
+    .required:before {
+        display: none;
+        content: "Enter text";
+        position: absolute;
+        left: 50%;
+        width: 80px;
+        height: 20px;
+        padding-bottom: 3px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: var(--logoBlue);
+        color: black;
+        font-size: 0.8rem;
+    }
+    .required.show:before {
+        display: block;
+    }
+    .required:after {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 53%;
+        width: 0; 
+        height: 0; 
+        border-left: 4px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 10px solid var(--logoBlue);
+    }
+    .required.show:after {
+        display: block;
+    }
+
 `
 
 const ButtonStyle = styled.div`
