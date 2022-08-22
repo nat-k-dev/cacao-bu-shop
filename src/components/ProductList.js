@@ -23,7 +23,7 @@ export default class ProductList extends Component {
                             </ProductConsumer>
                         </div>
                         <div className="py-5">
-                            <Title name="About" title="producer" className="row" />
+                            <Title name="About the" title="producer" className="row" />
                             <Carousel />
                             <AboutText />
                             <Contacts />
