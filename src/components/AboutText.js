@@ -24,15 +24,14 @@ export default class AboutText extends Component {
                 <span role="img" aria-label="Arrows to the right">⏩</span> Home-made natural chocolate
                 </p>
                 <p className="mt-3 mb-3 text-center">
-                    <span role="img" aria-label="Stop sign">🚫</span> Without lecithin
+                    <span role="img" aria-label="Green checkmark">✔️</span> Without lecithin
                     <br></br>
-                    <span role="img" aria-label="Stop sign">🚫</span> No refined sugar
+                    <span role="img" aria-label="Green checkmark">✔️</span> No refined sugar
                     <br></br>
-                    <span role="img" aria-label="Stop sign">🚫</span> Lactose free
+                    <span role="img" aria-label="Green checkmark">✔️</span> Lactose free
                 </p>
 
             </React.Fragment>
-                //<Product />
         )
     }
 }
