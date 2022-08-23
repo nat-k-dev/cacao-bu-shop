@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Product from './Product';
 import Title from './Title';
-import Carousel from './Carousel';
-import AboutText from './AboutText';
-import Contacts from './Contacts';
+import ProducerInfo from './ProducerInfo';
 import { ProductConsumer } from '../context';
 
 export default class ProductList extends Component {
@@ -22,12 +20,7 @@ export default class ProductList extends Component {
                                 }}
                             </ProductConsumer>
                         </div>
-                        <div className="py-5">
-                            <Title name="About the" title="producer" className="row" />
-                            <Carousel />
-                            <AboutText />
-                            <Contacts />
-                        </div>
+                        <ProducerInfo />
                     </div>
                 </div>
             </React.Fragment>
