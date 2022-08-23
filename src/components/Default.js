@@ -6,7 +6,6 @@ export default class Default extends Component {
         location: PropTypes.any
     }
     render() {
-        console.log(this.props);
         return (
             <div className="container">
                 <div className="row">
