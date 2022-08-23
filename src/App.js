@@ -7,7 +7,7 @@ import ProductList from './components/ProductList';
 import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
-import Modal from './components/Modal'
+import Modal from './components/Modal';
 
 class App extends Component {
   render() {
