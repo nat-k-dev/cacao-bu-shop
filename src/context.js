@@ -23,7 +23,7 @@ class ProductProvider extends Component {
     componentDidMount() {
         this.setProducts();
     }
-    /* this method helps to pass the messierObject
+    /* this method helps to pass the product
        into this.state.products by value (not by reference) */
     setProducts = () => {
         let tempProducts = [];
