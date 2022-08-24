@@ -30,7 +30,6 @@ export default class AboutText extends Component {
                     <br></br>
                     <span role="img" aria-label="Green checkmark">✔️</span> Lactose free
                 </p>
-
             </React.Fragment>
         )
     }
