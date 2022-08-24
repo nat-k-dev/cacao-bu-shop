@@ -143,7 +143,7 @@ export default class Contacts extends Component {
       }
 
       showSuccessPopup(status) {
-        if (status != 200) {
+        if (status !== 200) {
             this.showFailurePopup();
             return;
         }
