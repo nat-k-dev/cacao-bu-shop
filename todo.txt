@@ -1,5 +1,2 @@
-1) change data fields to more suitable for messier catalog
-2) fix different heights of cards
-3) make header fixed at the top while scrolling cards
-4) make cards visible only after scrolling down (ajax - ?)
-5) fix dark line in right top (right to NavBar) on iPad
+1) nex photos of producer with products in box
+2) "Send order" button. Add new email template in EmailJS. Add new form with customer's email (to send order from cart)
