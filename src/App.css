@@ -11,9 +11,13 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif !important;
+  margin: 0;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
   background: var(--backgroundDark) !important;
   color: var(--mainWhite) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
 }
 
 .text-title {
@@ -48,5 +52,5 @@ body {
 .cart-icon {
   cursor: pointer;
   font-size: 1.2rem;
-  color: var(--mainYellow) !important;
+  color: var(--mainYellow);
 }

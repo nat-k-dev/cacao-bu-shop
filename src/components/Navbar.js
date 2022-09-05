@@ -34,14 +34,14 @@ https://www.iconfinder.com/Makoto_msk  */}
 
 const NavWrapper = styled.nav`
     background: var(--logoBlue);
-    .nav-link {
-        color: var(--mainDark) !important;
+    .nav-item .nav-link {
+        color: var(--mainDark);
         font-size: 1.4rem;
         text-transform: uppercase;
         font-weight: semi-bold;
     }
-    .nav-link:hover {
-        color: var(--hoverDark) !important;
+    .nav-item .nav-link:hover {
+        color: var(--hoverDark);
     }
     .navbar-brand {
         max-height: 50px;
