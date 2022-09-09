@@ -206,7 +206,25 @@ const FormStyle = styled.div`
     .required.show:after {
         display: block;
     }
-
+    input#exampleFormControlInput1:valid,
+    input#exampleFormControlInput2:valid,
+    textarea#exampleFormControlTextarea1:valid {
+        border: 2px solid rgba(22, 198, 12, 0.7);
+    }
+    input#exampleFormControlInput1:invalid,
+    input#exampleFormControlInput2:invalid,
+    textarea#exampleFormControlTextarea1:invalid {
+        
+        border: 2px solid var(--danger);
+    }
+    input#exampleFormControlInput1::placeholder,
+    input#exampleFormControlInput2::placeholder {
+        font-style: oblique;
+    }
+    input#exampleFormControlInput1:focus::placeholder,
+    input#exampleFormControlInput2:focus::placeholder {
+        color: transparent;
+    }
 `
 
 const ButtonStyle = styled.div`
